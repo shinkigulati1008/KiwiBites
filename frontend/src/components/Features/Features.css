@@ -1,0 +1,36 @@
+.features {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .features .container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    box-shadow: none;
+  }
+  
+  .feature {
+    flex: 1;
+    margin: 0 20px;
+  }
+  
+  .feature img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px; 
+  }
+  
+  .feature h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .feature p {
+    font-size: 1.2em;
+    color: #555;
+  }
+  

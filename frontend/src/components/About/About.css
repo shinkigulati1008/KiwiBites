@@ -1,0 +1,29 @@
+.about-banner {
+    position: relative;
+    background-image: url('../../assets/banner4.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 400px; 
+  }
+  
+  .about-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 548px; 
+  }
+  
+  .about-content h1 {
+    margin: 0 0 10px;
+    font-size: 2.5em;
+    color: white;
+  }
+  
+  .about-content p {
+    margin: 10px 0;
+    font-size: 1.1em;
+  }
+  
