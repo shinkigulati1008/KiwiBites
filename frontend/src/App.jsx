@@ -5,10 +5,13 @@ import Login from './pages/Login/Login';
 import Checkout from './pages/Checkout/Checkout';
 import User from './pages/User/User';
 import Signup from './pages/Signup/Signup';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <Router>
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/restaurants" element={<Restaurant />} />

@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './Signup.css';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
     const [formData, setFormData] = useState({
@@ -14,11 +18,20 @@ const Signup = () => {
         [e.target.name]: e.target.value,
       });
     };
+
+    const navigate = useNavigate();
   
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
       e.preventDefault();
-      // Handle form submission logic here
-      console.log('Form submitted', formData);
+      try {
+        const response = await axios.post('/api/signup', formData);
+        console.log('User registered successfully:', response.data);
+        toast.success('User registered successfully!');
+        navigate('/login');
+      } catch (error) {
+        console.error('Error registering user:', error.response.data.error);
+        toast.error('Error registering user. Please try again.');
+      }
     };
   
     return (
